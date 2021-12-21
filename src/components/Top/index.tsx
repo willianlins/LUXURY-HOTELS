@@ -21,7 +21,7 @@ export function Top() {
       </div>
       <h2>Welcome to <pre>Luxury</pre> <b>Hotels</b></h2>
       <p>Book your stay and enjoy Luxury redefined at the most affordable rates.</p>
-      <button> 
+      <button>
         <BsFillCalendarCheckFill />
         Book now
       </button>
