@@ -1,5 +1,95 @@
 .headerContainer{
-  width:100vw;
-  height:100vh;
-  background-image: url("../../../public/assets/gabriel\ ghnassia\ A9h6OsAxTyQ\ unsplash.svg");
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/assets/home.png") ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: aliceblue;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #ffffff;
+  padding: 0 20px;
+}
+.headerContent{
+  width: 1500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  div:nth-child(2){
+    width: 100%;
+    align-self: left;
+    margin-top: 150px;
+  }
+
+  h2{
+    font: 45px Montserrat, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: -8px;  
+    line-height: 100px;
+    pre{
+      font: 154px var(--fontAdobeB);
+      line-height: 90px;
+    }
+
+    b{
+      font: 60px var(--fontAdobeB);
+      letter-spacing: 15px;
+      line-height: 15px;
+    }
+
+  }
+  p{
+    font: 25px Montserrat, sans-serif;
+  }
+}
+.headerTop{
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+
+  div{
+    width: 256px;
+    height: 140px;
+    background-color: var(--golden);
+    color: var(--blue);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  nav{
+    width: 350px;
+    align-items: center;
+    line-height: 140px;
+    font-weight: 500;
+
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      
+      li{
+        display: inline;
+        
+        a:hover{
+          font-weight: 600;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+
+
 }
