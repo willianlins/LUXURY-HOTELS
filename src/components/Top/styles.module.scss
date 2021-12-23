@@ -1,60 +1,85 @@
-.headerContainer{
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../../../public/assets/home.png") ;
+.headerContainer {
+  min-width: 100vw;
+  min-height: 100vh;
+  //background-image: url("../../../public/assets/home.png") ;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: aliceblue;
+  background-color: #ccc;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   color: #ffffff;
   padding: 0 20px;
+
+  button {
+    width: 250px;
+    height: 70px;
+    margin-top: 90px;
+    margin-bottom: 70px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--golden);
+    border-radius: 15px;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    transition: filter 0.3s;
+  }
+
+  button:hover {
+    filter: brightness(0.95);
+  }
 }
-.headerContent{
-  width: 1500px;
+.headerContent {
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-
-  div:nth-child(2){
+  div:nth-child(2) {
     width: 100%;
     align-self: left;
-    margin-top: 150px;
+    margin-top: 110px;
   }
 
-  h2{
+  h2 {
     font: 45px Montserrat, sans-serif;
     text-transform: uppercase;
-    margin-bottom: -8px;  
+    margin-bottom: -8px;
     line-height: 100px;
-    pre{
+    pre {
       font: 154px var(--fontAdobeB);
       line-height: 90px;
     }
 
-    b{
+    b {
       font: 60px var(--fontAdobeB);
       letter-spacing: 15px;
       line-height: 15px;
     }
-
   }
-  p{
+  p {
     font: 25px Montserrat, sans-serif;
   }
 }
-.headerTop{
+.headerTop {
   width: 100%;
   height: 140px;
   display: flex;
   justify-content: space-between;
-
-  div{
+  flex-wrap: nowrap;
+  div {
     width: 256px;
     height: 140px;
     background-color: var(--golden);
@@ -65,31 +90,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
-  nav{
+  nav {
     width: 350px;
     align-items: center;
     line-height: 140px;
     font-weight: 500;
 
-    ul{
+    ul {
       list-style: none;
       display: flex;
       justify-content: space-between;
-      
-      li{
+
+      li {
         display: inline;
-        
-        a:hover{
+
+        a:hover {
           font-weight: 600;
           text-decoration: underline;
         }
       }
     }
   }
+}
+.headerScroll {
+  font-size: 25;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
 
+  svg {
+    width: 30px;
+    height: 30px;
+    margin: 15px 0;
+    cursor: pointer;
 
+    transition: width 0.2s, height 0.2s;
 
+    &:hover {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }

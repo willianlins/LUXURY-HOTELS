@@ -1,0 +1,60 @@
+.Container{
+  width: 90%;
+  background-color: #a1a1;
+}
+
+.ContentHomeMsg{
+  margin: 40px 0;
+  text-align: center;
+  p{
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+}
+.ContentSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 600px;
+  background-color: #ccc;
+
+ 
+}
+.ContentSectionLine{
+  display: flex;
+  flex-direction: row;
+  height:inherit;
+
+  div:first-child{
+    height: 50%;
+    border-left: 1px solid var(--blue);
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+.ContentSectionInfo{
+  width: 500px;
+
+  background-color: #ddd;
+
+  
+
+  h3{
+    font: 40px var(--fontAdobeB), sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  p{
+    font-size: 20px;
+  }
+}
+
+.ContentSectionImg{
+  width: 850px;
+  height: 570px;
+  background-color: #c1c1;
+}
+
+

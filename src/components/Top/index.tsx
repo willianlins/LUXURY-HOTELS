@@ -8,9 +8,9 @@ export function Top() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.headerTop}>
-          <div>
+          {/* <div>
             <img src="./assets/logo.svg" alt="Luxuria Hotels" />
-          </div>
+          </div> */}
           <nav>
             <ul>
               <li><a href="https://">Home</a></li>
@@ -28,7 +28,7 @@ export function Top() {
           <BsFillCalendarCheckFill />
           Book now
         </button>
-        <div>
+        <div className={styles.headerScroll}>
           <span>Scroll</span>
           <BsFillArrowDownCircleFill />
         </div>

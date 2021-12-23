@@ -1,10 +1,10 @@
-import {Top} from "./components/Top"
+import {ContentHome} from "./components/ContentHome"
 
 import "./styles/global.scss";
 
 function App() {
   return (
-    <Top />
+    <ContentHome />
   );
 }
 
