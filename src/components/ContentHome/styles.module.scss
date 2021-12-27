@@ -1,60 +1,130 @@
-.Container{
+.Container {
   width: 90%;
-  background-color: #a1a1;
+  position: relative;
+
+  section:nth-child(2){
+    margin-bottom: 60px;
+  }
 }
 
-.ContentHomeMsg{
+.ContentHomeMsg {
   margin: 40px 0;
   text-align: center;
-  p{
+  p {
     font-size: 25px;
     font-weight: 500;
   }
-
 }
-.ContentSection{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.ContentSection {
   height: 600px;
-  background-color: #ccc;
-
- 
-}
-.ContentSectionLine{
   display: flex;
   flex-direction: row;
-  height:inherit;
-
-  div:first-child{
-    height: 50%;
+  align-items: center;
+  
+  
+}
+.ContentSectionLine {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+  position: relative;
+  
+  div:first-child {
+    display: inline-block;
+    vertical-align: top;
     border-left: 1px solid var(--blue);
     margin-right: 20px;
-    margin-left: 20px;
+    margin-top: 15px;
+    height: 95%;
+    position: absolute;
   }
 }
 
-.ContentSectionInfo{
+.ContentSectionInfo {
   width: 500px;
-
-  background-color: #ddd;
-
-  
-
-  h3{
-    font: 40px var(--fontAdobeB), sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  h3 {
+    font: 45px var(--fontAdobeB), sans-serif;
     margin-bottom: 20px;
   }
-  
-  p{
-    font-size: 20px;
+
+  p {
+    font-size: 25px;
+  }
+
+  button {
+    width: 150px;
+    height: 45px;
+    margin-top: 40px;
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--golden);
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    transition: filter 0.3s;
+  }
+
+  button:hover {
+    filter: brightness(0.95);
   }
 }
 
-.ContentSectionImg{
-  width: 850px;
+.ContentSectionImg {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 860px;
   height: 570px;
-  background-color: #c1c1;
+  background-color: rgba(85, 75, 85, 0.404);
 }
 
+.ContentSectionTestimonials{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top:  100px;
+  font-size: 14px;
 
+  h4{
+    font: 35px var(--fontAdobeB), sans-serif;
+    margin-bottom: 20px;
+  }
+
+  q{
+    font-size: 16px;
+     line-height: 0;
+  }
+
+  svg{
+    margin: 20px 0;
+    width: 25px;
+    height: 25px;
+    color: var(--golden);
+    cursor: pointer;
+    transition: filter 0.3s;
+
+    &:first-child{
+      margin-right: 10px;
+    }
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+
+}

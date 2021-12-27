@@ -1,10 +1,10 @@
-import {ContentHome} from "./components/ContentHome"
+import {Footer} from "./components/Footer"
 
 import "./styles/global.scss";
 
 function App() {
   return (
-    <ContentHome />
+    <Footer />
   );
 }
 

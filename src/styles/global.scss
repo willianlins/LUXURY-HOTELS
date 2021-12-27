@@ -31,6 +31,7 @@
 
 body, input, textarea, select, button{
   font: 400 1rem 'Montserrat', sans-serif;
+  color: var(--blue);
 }
 
 button{
@@ -44,7 +45,3 @@ a{
   text-decoration: none;
 }
 
-#root{
-  width: 100vw;
-  height: 100vh;
-}
