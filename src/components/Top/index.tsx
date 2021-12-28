@@ -1,6 +1,8 @@
 import { BsFillCalendarCheckFill, BsFillArrowDownCircleFill } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 import styles from "./styles.module.scss";
+
 
 
 export function Top() {
@@ -8,9 +10,9 @@ export function Top() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.headerTop}>
-          {/* <div>
+          <div>
             <img src="./assets/logo.svg" alt="Luxuria Hotels" />
-          </div> */}
+          </div>
           <nav>
             <ul>
               <li><a href="https://">Home</a></li>
@@ -30,7 +32,15 @@ export function Top() {
         </button>
         <div className={styles.headerScroll}>
           <span>Scroll</span>
-          <BsFillArrowDownCircleFill />
+          
+          <Link
+            activeClass="active"
+            to="contentHome"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={700}
+          ><BsFillArrowDownCircleFill /></Link>
         </div>
       </div>
     </header>

@@ -1,10 +1,11 @@
-import {Footer} from "./components/Footer"
+import { Home } from "./pages/Home"
+import {Top} from "./components/Top"
 
 import "./styles/global.scss";
 
 function App() {
   return (
-    <Footer />
+    <Home />
   );
 }
 

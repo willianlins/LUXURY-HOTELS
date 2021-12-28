@@ -1,3 +1,5 @@
+import {FaFacebookF, FaTwitter, FaInstagram} from "react-icons/fa"
+
 
 import styles from "./styles.module.scss"
 
@@ -21,12 +23,17 @@ export function Footer() {
               <li><a href="http://localhost:3000/">Terms & Conditions</a></li>
             </ul>
           </nav>
-
           <div className={styles.footerSocial}>
-            social
+            <FaFacebookF /><a href="http://localhost:3000/">Facebook</a><br/>
+            <FaTwitter/><a href="http://localhost:3000/">Twitter</a><br/>
+            <FaInstagram /><a href="http://localhost:3000/">Instagram</a><br/>     
           </div>
           <div className={styles.footerSearch}>
-            search
+            Subscribe to our newsletter
+            <div>
+              <input type="text" placeholder="Email Address" />
+              <button>OK</button>
+            </div>
           </div>
         </div>
       </div>

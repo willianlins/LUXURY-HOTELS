@@ -4,6 +4,10 @@
 
   section:nth-child(2){
     margin-bottom: 60px;
+
+    img{
+      height: 570px;
+    }
   }
 }
 
@@ -87,8 +91,7 @@
   display: inline-block;
   vertical-align: top;
   width: 860px;
-  height: 570px;
-  background-color: rgba(85, 75, 85, 0.404);
+  height: 487px;
 }
 
 .ContentSectionTestimonials{
