@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
 
 import styles from "./styles.module.scss";
 
-const Testimonials = [
+const testimonials = [
   {
     id: 1,
     author: "Mr. and Mrs. Baxter",
@@ -34,28 +34,45 @@ interface reportsProps {
   id: number,
   author: string,
   UF: string,
-  text: string,
+  text: string
 }
 
 
 export function ContentHome() {
 
-  const reports = useState<reportsProps>({
-    id: 0,
-    author: "",
-    UF: "",
-    text: "",
-  });
+  const [reports, setReports] = useState<reportsProps>(testimonials[0]);
+  const [ actve, setActive ] = useState(true)
+  let newId: number = 0;
+
+ 
+  useEffect(() =>{
+    newId+1 === testimonials.length-1 ? setActive(false) : setActive(true);
+    console.log(newId)
+  }, [newId, reports])
 
 
-  function viewReport() {
-    
+
+  function viewReport(inOrDe: string) {
     const id  =  reports.id;
-
-
-
+    
+    if(inOrDe === 'in'){
+      for(let repo in testimonials){
+        if(testimonials[repo].id === id ){
+          newId = Number(repo)+1;
+          setReports(testimonials[newId]);
+        }
+      };
+    }else{
+      for(let repo in testimonials){
+        if(testimonials[repo].id === id ){
+          newId = Number(repo)-1;
+          setReports(testimonials[newId])
+        }
+      }
+    }
+    console.log(newId)
   }
-
+  console.log(newId)
 
   return (
     <div className={styles.Container} >
@@ -88,11 +105,11 @@ export function ContentHome() {
       </section>
       <div className={styles.ContentSectionTestimonials}>
         <h4>Testimonials</h4>
-        <q>{Testimonials[2].text}</q>
-        <br />{Testimonials[2].author}, {Testimonials[2].UF}
+        <q>{reports.text}</q>
+        <br />{reports.author}, {reports.UF}
         <div>
-          <BsFillArrowLeftSquareFill />
-          <BsFillArrowRightSquareFill />
+          <BsFillArrowLeftSquareFill onClick={()=>viewReport('de')} color={actve ? "#E0B973" : "#ccc"} />
+          <BsFillArrowRightSquareFill onClick={()=>viewReport('in') } color={actve ? "#E0B973" : "#ccc"}/>
         </div>
       </div>
     </div>
