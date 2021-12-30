@@ -36,43 +36,59 @@ interface reportsProps {
   UF: string,
   text: string
 }
-
+let newId: number = 0;
 
 export function ContentHome() {
 
   const [reports, setReports] = useState<reportsProps>(testimonials[0]);
-  const [ actve, setActive ] = useState(true)
-  let newId: number = 0;
+  const [actveL, setActiveL] = useState(false)
+  const [actveR, setActiveR] = useState(false)
 
- 
-  useEffect(() =>{
-    newId+1 === testimonials.length-1 ? setActive(false) : setActive(true);
-    console.log(newId)
-  }, [newId, reports])
 
+
+  useEffect(() => {
+    isButtonActivated();
+  }, [])
+
+
+  function isButtonActivated() {
+
+    if (newId === testimonials.length - 1) {
+      setActiveR(false);
+    } else if (newId < testimonials.length - 1) {
+      setActiveR(true);
+    }
+
+    if (newId <= 0) {
+      setActiveL(false)
+    } else if (newId > 0) {
+      setActiveL(true)
+    }
+  }
 
 
   function viewReport(inOrDe: string) {
-    const id  =  reports.id;
-    
-    if(inOrDe === 'in'){
-      for(let repo in testimonials){
-        if(testimonials[repo].id === id ){
-          newId = Number(repo)+1;
+    const id = reports.id;
+
+    if (inOrDe === 'in') {
+      for (let repo in testimonials) {
+        if (testimonials[repo].id === id) {
+          newId = Number(repo) + 1;
           setReports(testimonials[newId]);
+          isButtonActivated();
         }
       };
-    }else{
-      for(let repo in testimonials){
-        if(testimonials[repo].id === id ){
-          newId = Number(repo)-1;
+    } else {
+      for (let repo in testimonials) {
+        if (testimonials[repo].id === id) {
+          newId = Number(repo) - 1;
           setReports(testimonials[newId])
+          isButtonActivated();
         }
       }
     }
-    console.log(newId)
   }
-  console.log(newId)
+
 
   return (
     <div className={styles.Container} >
@@ -108,8 +124,8 @@ export function ContentHome() {
         <q>{reports.text}</q>
         <br />{reports.author}, {reports.UF}
         <div>
-          <BsFillArrowLeftSquareFill onClick={()=>viewReport('de')} color={actve ? "#E0B973" : "#ccc"} />
-          <BsFillArrowRightSquareFill onClick={()=>viewReport('in') } color={actve ? "#E0B973" : "#ccc"}/>
+          <BsFillArrowLeftSquareFill onClick={() => actveL && viewReport('de')} color={actveL ? "#E0B973" : "#ccc"} cursor={actveL ? 'pointer' : 'unset'} />
+          <BsFillArrowRightSquareFill onClick={() => actveR && viewReport('in')} color={actveR ? "#E0B973" : "#ccc"} cursor={actveR ? 'pointer' : 'unset'} />
         </div>
       </div>
     </div>

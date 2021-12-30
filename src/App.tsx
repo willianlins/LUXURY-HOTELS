@@ -1,11 +1,11 @@
 import { Home } from "./pages/Home"
-import {Top} from "./components/Top"
+import {Facilities } from "./pages/Facilities"
 
 import "./styles/global.scss";
 
 function App() {
   return (
-    <Home />
+    <Facilities />
   );
 }
 
