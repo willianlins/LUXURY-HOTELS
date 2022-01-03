@@ -7,7 +7,7 @@ import styles from "../styles/home.module.scss";
 export function Home() {
   return (
     <div className={styles.HomeContainer}>
-      <Top />
+      <Top destiny="contentHome" />
       <ContentHome />
       <Footer />
     </div>

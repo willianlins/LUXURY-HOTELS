@@ -1,0 +1,82 @@
+.RoomsContainerMain{
+  height: 820px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--blue);
+  margin: 20px 0 40px 0;
+}
+.RoomsContainter {
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  color: #fff;
+
+  img {
+    width: 1100px;
+    height: 700px;
+    position: absolute;
+  }
+}
+
+.RoomsContainterMsg {
+  height:70px;
+  position: absolute;
+  bottom: 0;
+  left:0; 
+  right: 0;
+  text-align: center;
+  background-color: var(--blue);
+  
+  h3 {
+    line-height: 70px;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.RoomsContainerDetails{
+  height: 118px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  button {
+    width: 180px;
+    height: 45px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--golden);
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+
+  }
+}
+.RoomsDetails{
+  width: 50%;
+  font-weight: 600;
+  font-size: 16px;
+
+  svg{
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    color: var(--golden);
+    margin-right: 15px;
+
+  }
+
+
+}

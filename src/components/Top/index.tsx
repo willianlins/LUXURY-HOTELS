@@ -3,9 +3,11 @@ import { Link } from "react-scroll";
 
 import styles from "./styles.module.scss";
 
+interface TopProps{
+  destiny: string
+} 
 
-
-export function Top() {
+export function Top({destiny}: TopProps) {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -15,10 +17,10 @@ export function Top() {
           </div>
           <nav>
             <ul>
-              <li><a href="https://">Home</a></li>
-              <li><a href="https://">Facilities</a></li>
-              <li><a href="https://">Rooms</a></li>
-              <li><a href="https://">Contact-us</a></li>
+              <li><a href="http://localhost:3000/">Home</a></li>
+              <li><a href="http://localhost:3000/Facilities">Facilities</a></li>
+              <li><a href="http://localhost:3000/Rooms">Rooms</a></li>
+              <li><a href="http://localhost:3000/ContactUs">Contact-us</a></li>
             </ul>
           </nav>
         </div>
@@ -35,7 +37,7 @@ export function Top() {
           
           <Link
             activeClass="active"
-            to="contentHome"
+            to= {destiny}
             spy={true}
             smooth={true}
             offset={-100}
