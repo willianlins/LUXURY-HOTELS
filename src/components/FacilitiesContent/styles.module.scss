@@ -1,5 +1,31 @@
-.FacilitiesContainter{
+.FacilitiesContainter {
   width: 1100px;
   height: 700px;
-  background-color: #ccc;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 20px;
+  background-color: goldenrod;
+
+  img {
+    width: 1100px;
+    height: 700px;
+    position: absolute;
+  }
+}
+
+.FacilitiesContainterMsg {
+  width: 400px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left:50%; 
+  transform:translate(-50%, 0);
+  text-align: center;
+  background-color: white;
+  h3 {
+    line-height: 50px;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
 }
