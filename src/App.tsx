@@ -1,12 +1,13 @@
-import { Home } from "./pages/Home"
-import {Facilities } from "./pages/Facilities"
-import {Rooms} from "./pages/Rooms";
+import { Routin } from "./Routin"
+import { BrowserRouter } from "react-router-dom";
 
 import "./styles/global.scss";
 
 function App() {
   return (
-    <Rooms />
+    <BrowserRouter>
+      <Routin />
+    </BrowserRouter>
   );
 }
 

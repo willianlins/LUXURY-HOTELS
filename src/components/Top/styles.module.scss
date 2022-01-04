@@ -1,7 +1,7 @@
 .headerContainer  {
   min-width: 100%;
-  min-height: 100%;
-  // background-image: url("../../../public/assets/home.png") ;
+  height: 100vh;
+  background-image: url("../../../public/assets/home.png") ;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ccc;
@@ -16,7 +16,7 @@
   button {
     width: 250px;
     height: 70px;
-    margin-top: 90px;
+    margin-top: 160px;
     margin-bottom: 70px;
     color: #ffffff;
     font-weight: 500;
