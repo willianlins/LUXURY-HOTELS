@@ -44,10 +44,26 @@ export function Testimonials() {
 
 
 
+  // const myInterval = setInterval(myTimer, 1000);
+
+  // function myTimer() {
+  //   const date = new Date();
+  //   document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+  // }
+
+
+
+
   useEffect(() => {
     isButtonActivated();
+   setInterval(() => {
+      console.log('This will run every second!');
+    }, 1000);
   }, [])
 
+
+
+  
 
   function isButtonActivated() {
 
@@ -86,6 +102,8 @@ export function Testimonials() {
       }
     }
   }
+
+
   return (
     <div className={styles.ContentSectionTestimonials}>
       <h4>Testimonials</h4>
