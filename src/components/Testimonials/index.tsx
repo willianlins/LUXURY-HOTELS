@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
+import { setTimeout } from "timers/promises";
 
 import styles from "./styles.module.scss";
 
@@ -39,8 +40,9 @@ interface reportsProps {
 let newId: number = 0;
 export function Testimonials() {
   const [reports, setReports] = useState<reportsProps>(testimonials[0]);
-  const [actveL, setActiveL] = useState(false)
-  const [actveR, setActiveR] = useState(false)
+  const [actveL, setActiveL] = useState(false);
+  const [actveR, setActiveR] = useState(false);
+  const [atual, setAtual] = useState(0);
 
 
 
@@ -56,30 +58,63 @@ export function Testimonials() {
 
   useEffect(() => {
     isButtonActivated();
-   setInterval(() => {
-      console.log('This will run every second!');
-    }, 1000);
+    timeTestimonials();
   }, [])
 
 
 
-  
+  function timeTestimonials() {
+    //setTimeout(viewReport(), 3000, 'in')
+    
+    setInterval(()=>{
+      if(newId === 4){
+        setReports(testimonials[0]);
+        newId = 0;
+        isButtonActivated();
+      } else {
+        setReports(testimonials[newId]);
+        isButtonActivated();
+      }
+      newId = newId + 1;
+      console.log(newId)
+    }, 5000);
+
+    // if (newId <= 0 || (newId < 3 && newId > 0)) {
+    //       console.log('a')
+    //       viewReport('in');
+    // } else {
+    //       console.log('b')
+    //       viewReport('de');
+    // }
+  }
+
 
   function isButtonActivated() {
 
-    if (newId === testimonials.length - 1) {
+
+    if(newId === 0){
+      setActiveL(false);
+      setActiveR(true);
+    }else if(newId === 3){
+      setActiveL(true);
       setActiveR(false);
-    } else if (newId < testimonials.length - 1) {
+    }else{
+      setActiveL(true);
       setActiveR(true);
     }
 
-    if (newId <= 0) {
-      setActiveL(false)
-    } else if (newId > 0) {
-      setActiveL(true)
-    }
-  }
+    // if (newId === testimonials.length ) {
+    //   setActiveR(false);
+    // } else if (newId < testimonials.length ) {
+    //   setActiveR(true);
+    // }
 
+    // if (newId <= 0) {
+    //   setActiveL(false)
+    // } else if (newId > 0) {
+    //   setActiveL(true)
+    // }
+  }
 
   function viewReport(inOrDe: string) {
     const id = reports.id;
