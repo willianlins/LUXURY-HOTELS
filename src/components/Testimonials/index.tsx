@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
-import { setTimeout } from "timers/promises";
 
 import styles from "./styles.module.scss";
 
@@ -42,19 +41,6 @@ export function Testimonials() {
   const [reports, setReports] = useState<reportsProps>(testimonials[0]);
   const [actveL, setActiveL] = useState(false);
   const [actveR, setActiveR] = useState(false);
-  const [atual, setAtual] = useState(0);
-
-
-
-  // const myInterval = setInterval(myTimer, 1000);
-
-  // function myTimer() {
-  //   const date = new Date();
-  //   document.getElementById("demo").innerHTML = date.toLocaleTimeString();
-  // }
-
-
-
 
   useEffect(() => {
     isButtonActivated();
@@ -64,8 +50,7 @@ export function Testimonials() {
 
 
   function timeTestimonials() {
-    //setTimeout(viewReport(), 3000, 'in')
-    
+ 
     setInterval(()=>{
       if(newId === 4){
         setReports(testimonials[0]);
@@ -78,20 +63,10 @@ export function Testimonials() {
       newId = newId + 1;
       console.log(newId)
     }, 5000);
-
-    // if (newId <= 0 || (newId < 3 && newId > 0)) {
-    //       console.log('a')
-    //       viewReport('in');
-    // } else {
-    //       console.log('b')
-    //       viewReport('de');
-    // }
   }
 
 
   function isButtonActivated() {
-
-
     if(newId === 0){
       setActiveL(false);
       setActiveR(true);
@@ -102,18 +77,6 @@ export function Testimonials() {
       setActiveL(true);
       setActiveR(true);
     }
-
-    // if (newId === testimonials.length ) {
-    //   setActiveR(false);
-    // } else if (newId < testimonials.length ) {
-    //   setActiveR(true);
-    // }
-
-    // if (newId <= 0) {
-    //   setActiveL(false)
-    // } else if (newId > 0) {
-    //   setActiveL(true)
-    // }
   }
 
   function viewReport(inOrDe: string) {
