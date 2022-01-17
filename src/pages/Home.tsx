@@ -7,7 +7,7 @@ import styles from "../styles/home.module.scss";
 export function Home() {
   return (
     <div className={styles.HomeContainer}>
-      <Top destiny="contentHome" />
+      <Top destiny="contentHome"  imgTopHeader="./assets/home.png"/>
       <ContentHome />
       <Footer />
     </div>

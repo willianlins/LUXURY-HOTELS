@@ -5,6 +5,7 @@ import { Facilities } from "./pages/Facilities";
 import {Home}  from './pages/Home';
 import { Rooms } from "./pages/Rooms";
 
+
 export function Routin() {
   return (
     <Routes>

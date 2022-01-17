@@ -8,7 +8,7 @@ import styles from "../styles/facilities.module.scss"
 export function Facilities() {
   return (
     <>
-      <Top destiny= "aqui" />
+      <Top destiny= "aqui" imgTopHeader="./assets/Facilities.png" />
       <div className={styles.FacilitiesContainer} id="aqui">
         <div className={styles.ContentFacilitiesMsg}>
           <h2>Facilities</h2>

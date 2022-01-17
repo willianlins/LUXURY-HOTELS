@@ -18,7 +18,7 @@ export function ContentHome() {
             <button>Explore</button>
           </div>
         </div>
-        {/* <img className={styles.ContentSectionImg} src="./assets/steven-ungermann-aRT5UCf2MYY-unsplash.svg" alt="Quarto" /> */}
+        <img className={styles.ContentSectionImg} src="./assets/steven-ungermann-aRT5UCf2MYY-unsplash.svg" alt="Quarto" />
         <div className={styles.ContentSectionImg}></div>
       </section>
       <section className={styles.ContentSection}>
@@ -30,7 +30,7 @@ export function ContentHome() {
             <button>Explore</button>
           </div>
         </div>
-        {/* '<img className={styles.ContentSectionImg} src="./assets/andrew-ruiz-fmz-B9At9iQ-unsplash.svg" alt="Quarto" />' */}
+        '<img className={styles.ContentSectionImg} src="./assets/andrew-ruiz-fmz-B9At9iQ-unsplash.svg" alt="Quarto" />'
         <div className={styles.ContentSectionImg}></div>
       </section>
       <Testimonials/>

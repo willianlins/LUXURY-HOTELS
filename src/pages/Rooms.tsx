@@ -8,7 +8,7 @@ import { RoomsContent } from "../components/RoomsContent";
 export function Rooms() {
   return (
     <>
-      <Top destiny="aqui"/>
+      <Top destiny="aqui" imgTopHeader="./assets/rooms.png"/>
       <div className={styles.RoomsContainer} >
         <div className={styles.RoomsFacilitiesMsg} id="aqui">
           <h2>Rooms and Rates</h2>

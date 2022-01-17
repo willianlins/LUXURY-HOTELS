@@ -5,11 +5,14 @@ import styles from "./styles.module.scss";
 
 interface TopProps{
   destiny: string
+  imgTopHeader?: string
 } 
 
-export function Top({destiny}: TopProps) {
+
+export function Top({destiny, imgTopHeader}: TopProps) {
   return (
     <header className={styles.headerContainer}>
+      <img className={styles.headerImgTop} src={imgTopHeader} alt="img Luxuria" />
       <div className={styles.headerContent}>
         <div className={styles.headerTop}>
           <div>
